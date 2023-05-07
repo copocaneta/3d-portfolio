@@ -20,22 +20,26 @@ const Contact = () => {
           <a
             href="https://discordapp.com/users/724435328823197757/"
             target="_blank"
+            className="flex flex-row items-center gap-2"
           >
             <FontAwesomeIcon
               icon={faDiscord}
-              className="text-[#7289da]"
+              className="text-[#7289da] w-[30px]"
               size="2x"
             />
+            <span>Reach me out on Discord!</span>
           </a>
           <a
             href="https://discordapp.com/users/724435328823197757/"
             target="_blank"
+            className="flex flex-row items-center gap-2"
           >
             <FontAwesomeIcon
               icon={faTelegram}
-              className="text-[#229ED9]"
+              className="text-[#229ED9] w-[30px]"
               size="2x"
             />
+            <span>Reach me out on Telegram!</span>
           </a>
         </div>
       </motion.div>
