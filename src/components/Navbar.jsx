@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
+import { navLinks, socialLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -33,16 +34,23 @@ const Navbar = () => {
             <span className="sm:block hidden">| Fullstack engineer</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <NavItem
-              link={link}
-              active={active}
-              handleActive={handleActive}
-              key={link.id}
-            />
-          ))}
-        </ul>
+        <div className="flex gap-3 justify-end">
+          <ul className="list-none hidden sm:flex flex-row gap-2">
+            {socialLinks.map((social, idx) => (
+              <li key={`social-${idx}`}>{social.name}</li>
+            ))}
+          </ul>
+          <ul className="list-none hidden sm:flex flex-row gap-10">
+            {navLinks.map((link) => (
+              <NavItem
+                link={link}
+                active={active}
+                handleActive={handleActive}
+                key={link.id}
+              />
+            ))}
+          </ul>
+        </div>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}

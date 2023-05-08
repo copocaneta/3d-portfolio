@@ -38,6 +38,24 @@ export const navLinks = [
   },
 ];
 
+export const socialLinks = [
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/in/thiago-bernardi/",
+    icon: "faStackOverflow ",
+  },
+  {
+    name: "github",
+    link: "https://github.com/copocaneta",
+    icon: "faGithub",
+  },
+  {
+    name: "stackoverflow",
+    link: "https://stackoverflow.com/users/8754987/thiago-bernardi",
+    icon: "faStackOverflow",
+  },
+];
+
 const services = [
   {
     title: "Fullstack Software Engineer",
